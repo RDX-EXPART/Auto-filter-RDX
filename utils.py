@@ -25,7 +25,6 @@ BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\((buttonurl|buttonalert):(?:/{0,2})(
 
 # Pin a pre-2026 Cinemagoer release in requirements.txt; it supports IMDb's HTTP access system.
 imdb = Cinemagoer(accessSystem='http')
-_IMDB_LOOKUPS = BoundedExecutor(max_workers=1)
 TOKENS = {}
 VERIFIED = {}
 BANNED = {}
