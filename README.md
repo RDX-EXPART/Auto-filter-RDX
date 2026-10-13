@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/rdx-filter-bot.png" alt="RDX-Filter-Bot Logo" width="600">
+  <img src="https://files.catbox.moe/hmwwj2.jpg" alt="RDX-Filter-Bot Logo" width="600">
 </p>
 <h1 align="center">
-  VJ FILTER BOT
+  RDX FILTER BOT
 </h1>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+RDX+Filter+Bot!)
@@ -35,7 +35,7 @@
 
 - Note : You Can Turn On Or Off Every Feature, Just Use Which Feature You Want By Turning It On.
 
-Join My <a href='https://telegram.me/vj_bots'>Update Channel</a> For More Update Regarding Repo.</b>
+Join My <a href='https://telegram.me/rdxmovie_hd'>Update Channel</a> For More Update Regarding Repo.</b>
 
 ### How To Deploy : [Video Tutorial](https://youtu.be/3SJR7vH2kRo)
 
@@ -194,7 +194,7 @@ Edit info.py with variables as given below then run bot
 
 <b>• If You Want Paid Edits Or Any Paid Features In Any Kind Of Auto Filter Bot Repo You Can Contact Developer.</b>
  
-[![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/KingVJ01) 
+[![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/rdx_personal) 
 
 <b>Fork The Repo And Edit As Per Your Needs.</b>
 
