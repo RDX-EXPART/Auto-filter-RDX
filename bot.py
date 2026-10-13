@@ -25,9 +25,9 @@ from aiohttp import web
 from plugins import web_server
 from plugins.clone import restart_bots
 
-from TechVJ.bot import TechVJBot
-from TechVJ.util.keepalive import ping_server
-from TechVJ.bot.clients import initialize_clients
+from RDX.bot import TechVJBot
+from RDX.util.keepalive import ping_server
+from RDX.bot.clients import initialize_clients
 
 # RDX button color styling: primary blue, success green, danger red.
 enable_primary_buttons()
