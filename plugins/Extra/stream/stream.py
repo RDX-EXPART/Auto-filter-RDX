@@ -6,8 +6,8 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, CallbackQuery
 from info import STREAM_MODE, URL, LOG_CHANNEL
 from urllib.parse import quote_plus
-from TechVJ.util.file_properties import get_name, get_hash, get_media_file_size
-from TechVJ.util.human_readable import humanbytes
+from RDX.util.file_properties import get_name, get_hash, get_media_file_size
+from RDX.util.human_readable import humanbytes
 import humanize
 import random
 
