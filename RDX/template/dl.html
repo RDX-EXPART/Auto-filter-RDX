@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#120607">
+    <title>{{ brand_name }} | {{ file_name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #070506;
+            --panel: #12090a;
+            --panel-2: #1b0b0d;
+            --red: #9f161c;
+            --red-bright: #e3312d;
+            --gold: #d6a84d;
+            --gold-light: #f6dc8b;
+            --text: #f7f2e8;
+            --muted: #baaaa2;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--text);
+            font-family: "Montserrat", sans-serif;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(159, 22, 28, .28), transparent 34rem),
+                radial-gradient(circle at 100% 70%, rgba(214, 168, 77, .12), transparent 28rem),
+                var(--bg);
+        }
+        a { color: inherit; text-decoration: none; }
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: .8rem max(1rem, calc((100% - 1100px) / 2));
+            background: rgba(7, 5, 6, .92);
+            border-bottom: 1px solid rgba(214, 168, 77, .28);
+            backdrop-filter: blur(16px);
+        }
+        .brand { display: flex; align-items: center; gap: .75rem; font-weight: 800; }
+        .brand img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            box-shadow: 0 0 24px rgba(227, 49, 45, .22);
+        }
+        .brand small { display: block; color: var(--gold); font-size: .68rem; letter-spacing: .12rem; }
+        .nav-link { color: var(--gold-light); font-size: .82rem; font-weight: 700; }
+        .wrap { width: min(1100px, calc(100% - 2rem)); margin: 2rem auto; }
+        .hero {
+            overflow: hidden;
+            border: 1px solid rgba(214, 168, 77, .32);
+            border-radius: 24px;
+            background: linear-gradient(145deg, rgba(27, 11, 13, .98), rgba(7, 5, 6, .98));
+            box-shadow: 0 28px 80px rgba(0, 0, 0, .45);
+        }
+        .accent { height: 4px; background: linear-gradient(90deg, var(--red), var(--gold), var(--red)); }
+        .content { padding: clamp(1rem, 3vw, 2rem); }
+        .eyebrow { color: var(--gold); font-size: .75rem; letter-spacing: .18rem; font-weight: 800; }
+        h1 { margin: .55rem 0 1rem; font-size: clamp(1.35rem, 4vw, 2.4rem); line-height: 1.25; overflow-wrap: anywhere; }
+        .meta { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.2rem; }
+        .pill {
+            padding: .55rem .8rem;
+            border: 1px solid rgba(214, 168, 77, .25);
+            border-radius: 999px;
+            color: var(--muted);
+            background: rgba(255, 255, 255, .025);
+            font-size: .78rem;
+        }
+        #player {
+            display: block;
+            width: 100%;
+            max-height: 68vh;
+            background: #000;
+            border-block: 1px solid rgba(214, 168, 77, .2);
+        }
+        .actions {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: .75rem;
+            padding: clamp(1rem, 3vw, 2rem);
+        }
+        button, .button {
+            width: 100%;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(214, 168, 77, .55);
+            border-radius: 13px;
+            color: var(--gold-light);
+            background: linear-gradient(145deg, #2b1013, #12090a);
+            font: inherit;
+            font-size: .78rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: transform .18s ease, border-color .18s ease;
+        }
+        button:hover, .button:hover { transform: translateY(-2px); border-color: var(--gold-light); }
+        .primary {
+            color: #150a08;
+            border-color: var(--gold);
+            background: linear-gradient(135deg, #f0cc72, #ba7828);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .info-card {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid rgba(214, 168, 77, .2);
+            border-radius: 16px;
+            background: rgba(18, 9, 10, .75);
+        }
+        .info-card strong { display: block; color: var(--gold-light); margin-bottom: .35rem; }
+        .info-card span { color: var(--muted); font-size: .78rem; }
+        footer { padding: 2rem 1rem 3rem; text-align: center; color: var(--muted); font-size: .76rem; }
+        footer a { color: var(--gold); }
+        @media (max-width: 720px) {
+            .nav { padding-inline: 1rem; }
+            .brand-text { font-size: .82rem; }
+            .actions, .info-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 470px) {
+            .actions, .info-grid { grid-template-columns: 1fr; }
+            .nav-link { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a class="brand" href="{{ update_channel_link }}">
+            <img src="/brand-assets/rdx-profile-logo.jpg" alt="RDX logo">
+            <span class="brand-text">{{ brand_name }}<small>{{ brand_tagline }}</small></span>
+        </a>
+        <a class="nav-link" href="{{ movie_group_link }}">MOVIE REQUEST GROUP ↗</a>
+    </nav>
+
+    <main class="wrap">
+        <section class="hero">
+            <div class="accent"></div>
+            <div class="content">
+                <div class="eyebrow">RDX FILE DELIVERY</div>
+                <h1>{{ file_name }}</h1>
+                <div class="meta">
+                    <span class="pill">📦 {{ file_size }}</span>
+                    <span class="pill">🔒 Secure Telegram stream</span>
+                    <span class="pill">⚡ Fast direct access</span>
+                </div>
+            </div>
+
+            <video id="player" src="{{ file_url }}" type="video/mp4" playsinline controls preload="metadata"></video>
+
+            <div class="actions">
+                <button onclick="vlc_player()">VLC PLAYER</button>
+                <button onclick="mx_player()">MX PLAYER</button>
+                <button onclick="playit_player()">PLAYIT PLAYER</button>
+                <button onclick="km_player()">KM PLAYER</button>
+                <button onclick="s_player()">S PLAYER</button>
+                <button onclick="hd_player()">HD PLAYER</button>
+                <button class="primary" onclick="bisalDownload()">DOWNLOAD FILE</button>
+                <a class="button" href="{{ update_channel_link }}">UPDATES CHANNEL</a>
+                <a class="button" href="{{ owner_link }}">CONTACT OWNER</a>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <div class="info-card"><strong>SEARCH</strong><span>Find movies and series quickly.</span></div>
+            <div class="info-card"><strong>STREAM</strong><span>Play in your preferred media player.</span></div>
+            <div class="info-card"><strong>DOWNLOAD</strong><span>Save the original Telegram file.</span></div>
+        </section>
+    </main>
+
+    <footer>
+        © {{ current_year }} <a href="{{ update_channel_link }}">{{ brand_name }}</a> · {{ brand_tagline }}<br>
+        Files are delivered from Telegram. Respect applicable copyright laws.
+    </footer>
+
+    <script src="https://biisal.github.io/Resources/StreamJs.js"></script>
+</body>
+</html>
