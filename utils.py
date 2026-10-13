@@ -17,7 +17,6 @@ from database.join_reqs import JoinReqs
 from bs4 import BeautifulSoup
 from shortzy import Shortzy
 from search_filters import clean_display_filename, display_filter_query, parse_filter_query
-from bounded_executor import BoundedExecutor
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
