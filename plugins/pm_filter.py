@@ -10,7 +10,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 from pyrogram import Client, filters, enums, StopPropagation
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
-from auto_delete import schedule_delete
 from database.tmdb_client import get_tmdb_movie, get_tmdb_tv, get_tmdb_any, image_url, fetch_tmdb_image, build_tmdb_card, SEPARATOR
 from utils import get_size, is_subscribed, pub_is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, get_shortlink, get_tutorial, send_all, get_cap, reply_photo_or_text, get_auto_delete_seconds, auto_delete_minutes, auto_delete_notice
 from database.users_chats_db import db
