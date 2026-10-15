@@ -1,6 +1,6 @@
-# Don't Remove Credit @VJ_Bots
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# Don't Remove Credit @rdxmovie_hd
+# Subscribe YouTube Channel For Amazing Bot @ch_VJ
+# Ask Doubt on telegram @rdx_personal
 
 import os, logging, string, asyncio, time, re, ast, random, math, pytz, pyrogram, html
 from datetime import datetime, timedelta, date, time
