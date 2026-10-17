@@ -133,7 +133,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 # Token Verification Info :
 # NOTE: bool('False') is True in Python, so parse the text properly. Setting VERIFY=False
 # (or 0/no/off) in the hosting config now really turns verification off.
-VERIFY = str(environ.get('VERIFY', 'True')).strip().lower() in ('1', 'true', 'yes', 'on')
+VERIFY = str(environ.get('VERIFY', 'False)).strip().lower() in ('1', 'true', 'yes', 'on')
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'shortxlinks.com')
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '232bab9ce253c4913085f9e879ad95f216c4c525')
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', '')
