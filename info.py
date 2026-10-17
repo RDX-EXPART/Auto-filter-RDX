@@ -110,7 +110,7 @@ MAX_BTN = bool(environ.get('MAX_BTN', True))
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 IMDB = bool(environ.get('IMDB', False))
 # Optional OMDb key for IMDb and Rotten Tomatoes scores. Leave empty to disable.
-OMDB_API_KEY = environ.get('OMDB_API_KEY', "")
+OMDB_API_KEY = environ.get('OMDB_API_KEY', "579a3919")
 TMDB_BACKDROP = str(environ.get('TMDB_BACKDROP', 'False')).strip().lower() in ('1', 'true', 'yes', 'on')
 AUTO_FFILTER = bool(environ.get('AUTO_FFILTER', True))
 AUTO_DELETE = bool(environ.get('AUTO_DELETE', True))
