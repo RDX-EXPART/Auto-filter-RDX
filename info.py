@@ -11,9 +11,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'RDX')
-API_ID = int(environ.get('API_ID', '34508826'))
-API_HASH = environ.get('API_HASH', 'de91472f471dd5e00771b26d3e149ffd')
-BOT_TOKEN = environ.get('BOT_TOKEN', '8508977137:AAEb7bW6oRaJzrYvefoqGJxadcbazmYoRbo')
+API_ID = int(environ.get('API_ID', ''))
+API_HASH = environ.get('API_HASH', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
@@ -64,7 +64,7 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 # One MongoDB database holds everything: users, filters, connections, indexed files
 # (COLLECTION_NAME) and index job state. Set DATABASE_NAME to the database that already
 # contains your existing rdxcollection; the default below is only a fallback.
-DATABASE_URI = environ.get('DATABASE_URI', 'mongodb+srv://Filter:Filter@cluster0.9kke2jw.mongodb.net/?appName=Cluster0')
+DATABASE_URI = environ.get('DATABASE_URI', '')
 DATABASE_NAME = environ.get('DATABASE_NAME', "rdxfilterbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'rdxcollection')
 
@@ -140,7 +140,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 # (or 0/no/off) in the hosting config now really turns verification off.
 VERIFY = str(environ.get('VERIFY', 'False')).strip().lower() in ('1', 'true', 'yes', 'on')
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'shortxlinks.com')
-VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '232bab9ce253c4913085f9e879ad95f216c4c525')
+VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '85f9e879ad95f216c4c525')
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', '')
 # Default verification validity in hours. Admins can change it with /set_verify_time (10, 12, 24 or 48).
 try:
