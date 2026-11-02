@@ -35,6 +35,8 @@ from RDX.bot import TechVJBot
 from RDX.util.keepalive import ping_server
 from RDX.bot.clients import initialize_clients
 
+# RDX button color styling: primary blue, success green, danger red.
+enable_primary_buttons()
 
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
